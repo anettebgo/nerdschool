@@ -1,0 +1,47 @@
+Basisverktøy: 
+- ls
+- cd
+- history
+- grep
+- find
+- tail 
+- head
+- less
+- cat
+- echo
+- rm 
+- cp/mv
+- pipe
+- scp
+- ssh 
+- chmod
+- vim 
+- mkdir
+- touch
+- sed
+- awk
+
+Om systemet:
+- PATH
+- miljøvariabler
+- dot-filer
+- sudo
+
+Scripting: 
+- #!
+- filrettigheter
+- ssh (spesifikt nøkler)
+- kombinasjoner av operasjoner, som
+- find + grep (med highlight også?)
+- grep + sed + awk
+
+Mulige oppgaver: 
+- finne fil(er) med innhold x, kopiere til ny katalog, gjøre noe med filen. Evt
+  finne fil som inneholder x og fil som inneholder y i samme katalog. Laste ned
+  og opp filer med ssh i script
+- lage build-og-deploy-script for remote deploy (ssh-nøkler, ssh-exec, scp)
+- følge med på loggfiler (finne, lytte på, kanskje gjøre noe intelligent for å
+  få ut informasjon)
+
+Finne oppgaver som ikke er så lett google-bare
+
