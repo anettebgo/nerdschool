@@ -1,47 +1,72 @@
+Forutsetninger: *nix eller OSX eller cygwin (annet som gir linux-ish konsoll)
+Ved deling av script: husk line endings i Windows kan være annerledes enn
+*nix/OSX
+
 Basisverktøy: 
-- ls
-- cd
-- history
-- grep
-- find
-- tail 
-- head
-- less
-- cat
-- echo
-- rm 
-- cp/mv
-- pipe
-- scp
-- ssh 
-- chmod
-- vim 
-- mkdir
-- touch
-- sed
-- awk
+1) Navigering:
+    - ls
+    - pwd
+    - cd
+    - find
 
-Om systemet:
-- PATH
-- miljøvariabler
-- dot-filer
-- sudo
+2) Oversikt:
+    - history
+	- tail 
+	- head
+	- less
+	- cat
+    - grep
 
-Scripting: 
-- #!
-- filrettigheter
-- ssh (spesifikt nøkler)
-- kombinasjoner av operasjoner, som
-- find + grep (med highlight også?)
-- grep + sed + awk
+3) Fil- og katalogmanipulering:
+    - mkdir
+    - cp/mv
+    - rm 
+    - chmod (filrettigheter)
+    - touch
+
+4) Editering/Endring
+    - vim 
+    - sed
+    - awk
+
+5) Scripting basics
+    - echo
+    - pipe
+    - for 
+    - if
+    - variabler
+
+6) Remote
+    - scp
+    - ssh 
+
+7) Hvordan få hjelp? 
+    - google
+    - man <kommando>
+
+8) Om systemet:
+    - PATH
+    - miljøvariabler
+    - dot-filer
+    - sudo
+
+9) Scripting: 
+    - #!
+    - filrettigheter
+	- ssh (spesifikt nøkler)
+	- kombinasjoner av operasjoner, som
+	- find + grep (med highlight også?)
+	- grep + sed + awk
 
 Mulige oppgaver: 
-- finne fil(er) med innhold x, kopiere til ny katalog, gjøre noe med filen. Evt
-  finne fil som inneholder x og fil som inneholder y i samme katalog. Laste ned
-  og opp filer med ssh i script
-- lage build-og-deploy-script for remote deploy (ssh-nøkler, ssh-exec, scp)
-- følge med på loggfiler (finne, lytte på, kanskje gjøre noe intelligent for å
-  få ut informasjon)
+	- finne fil(er) med innhold x, kopiere til ny katalog, gjøre noe med filen. Evt
+	  finne fil som inneholder x og fil som inneholder y i samme katalog. Laste ned
+	  og opp filer med ssh i script
+	- lage build-og-deploy-script for remote deploy (ssh-nøkler, ssh-exec, scp)
+	- følge med på loggfiler (finne, lytte på, kanskje gjøre noe intelligent for å
+	  få ut informasjon)
+	- rekursive operasjoner, feks finne alle test-klasser i et hierarki og strippe
+	  ut testnavn evt funksjonsnavn
 
 Finne oppgaver som ikke er så lett google-bare
 
