@@ -18,11 +18,11 @@ We are aiming primarily at students in the first and second semesters of Informa
 Okay, I want to! When and where?
 -----------------------
 The planned dates for 2014 are every second Tuesday at the UiB Computer Lab:
-*23. September - Introducing the command line
-*07. October - Learn Git
-*21. October - Getting started with web technologies (JavaScript, HTML & CSS)
-*04. November
-*18. November
+* 23. September - Introducing the command line
+* 07. October - Learn Git
+* 21. October - Getting started with web technologies (JavaScript, HTML & CSS)
+* 04. November
+* 18. November
 
 
 What happens if I miss one?
