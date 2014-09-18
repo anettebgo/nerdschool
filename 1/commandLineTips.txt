@@ -1,17 +1,6 @@
-Forutsetninger: *nix eller OSX eller cygwin (annet som gir linux-ish konsoll)
-Ved deling av script: husk line endings i Windows kan være annerledes enn
-*nix/OSX
-
-Slides: 
-    - hva forutsetter vi for denne øvelsen (se over)
-    - hvordan virker skallet generelt sett (kommando --> enter --> tolkes -->
-      eksekveres der og da)
-    - hva er kommandoer? (små programmer) 
-    - hvordan er syntax for bruk av kommandoer generelt sett? 
-    - vanlige argumenter/parametre
-    - pipe
-    - vise script
-    - henvise til fil med eksempler 
+You'll need something that gives you a bash-like shell. If you're using a *nix
+system or OSX you'll be fine, if you're using Windows you can for instance
+download git and use the shell that comes with it. 
 
 Some useful tools and a short intro to what they do: 
 1) Navigation
@@ -54,6 +43,7 @@ Some useful tools and a short intro to what they do:
     - ssh : securely log in to a remote box
     - scp : send files from one box to another with ssh 
     - rsync : synchronise files locally or remote
+    - wget : gets files over http
 
 7) How do I get help? 
     - google is, as always, your friend
@@ -77,23 +67,48 @@ Some useful tools and a short intro to what they do:
     - for loops
 
 
+- cut down on ls and use find fex to list out classes in a file hierarchy?
 
-Exercise 1: basics
+Exercise 1: Basics of the shell
 - List the contents of the directory you are currently standing in
-- List the current working directory
-- List the hidden files (if any) in your directory
+- Print the path to the current working directory
 - Find the java executable on your system 
+- List the hidden files (if any) in a directory
+- List the files in your directory with file sizes in K and M rather than bytes
+- List the files in a directory by ordering them by their last-modified date
+- List all files in a directory with nice size references ordered by the
+  last-modified date
+- Use a for loop to print out the contents of a directory, one item per line
+- Try to do the previous task both as a script and as a one-liner in the shell
+- Make a variable containing the name of a directory. Make a test that checks
+  whether the name is a directory or a regular file. Print out the line "This is
+  a directory" if the variable names a directory. 
 
-Exercise 2: 
-- Do some basic shell scripting, like using for loops, conditionals, grep. 
+Exercise 2: Putting it all together 
+- Make a script (.sh file) that lists the contents of sub directories in the
+  current working directory. It should print the name of the directory first and
+  then the contents of the relevant directory. Can you make the size of each
+  file listed in K, M rather than bytes? Also, can you sort the files by
+  last-modified date?  Can you make the file executable without running `bash
+  myScript.sh`?
+- Do the same task, but as a "one-liner" in the shell
 
-Exercise 3: Set up your own .vimrc
-- Figure out how to automatically turn on syntax highlighting
-- Automatically convert tabs to spaces
-- make an alias so that :WQ behaves like :wq 
+Exercise 3: Searching and editing
+- grep, sed, tail. 
 
 
-Exercise 4: working remote 
+Exercise 4: Set up your own .vimrc and try out vi or vim
+- Open vi or vim 
+- Add some text to the file
+- Save the file
+- Turn on syntax highlighting
+- Close vim
+- Make your own .vimrc file by editing it in vim. You should include syntax
+  highlighting and convert tabs to spaces
+- make an alias so that WQ and Wg behaves like wq 
+
+
+Exercise 5: working remote 
 We've set up a box on the amazon cloud that you can use for this exercise. 
 In this exercise you should: 
 - ssh into the box using the login information given in the workshop
@@ -102,3 +117,4 @@ In this exercise you should:
 - download the right file (can you pick it out?) using scp or rsync
 - if you have time, use ssh to execute a command on the box that generates a
   file named after you, e.g. siv.txt
+- download this file from github by using its URL
