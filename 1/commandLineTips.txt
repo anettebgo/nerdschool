@@ -54,7 +54,7 @@ Some useful tools and a short intro to what they do:
     - environment variables
     - dot-files : hidden files , e.g. .bashrc
     - sudo : perform tasks as super user (with great power comes great
-      responsibility)
+      responsibility) (on windows you can use "run as Administrator")
 
 9) Scripting: 
     - #! (shebang)
