@@ -1,6 +1,7 @@
 You'll need something that gives you a bash-like shell. If you're using a *nix
 system or OSX you'll be fine, if you're using Windows you can for instance
-download git and use the shell that comes with it. 
+download git and use the shell that comes with it (http://git-scm.com/downloads
+Remember to opt in for Git Bash when installing). 
 
 Some useful tools and a short intro to what they do: 
 1) Navigation
@@ -43,6 +44,7 @@ Some useful tools and a short intro to what they do:
     - scp : send files from one box to another with ssh 
     - rsync : synchronise files locally or remote
     - wget : gets files over http
+    - curl : gets files over http 
 
 7) How do I get help? 
     - google is, as always, your friend
