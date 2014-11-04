@@ -1,0 +1,19 @@
+Create a simple game
+
+Part One
+- Create a <canvas> element of 400 by 400 pixels
+- When clicking inside the canvas, draw a square
+- Make the square move in a single direction
+
+Part Two
+- Bounce back square when reaching the edge
+- Change color when a square collides with another square
+- Set a random speed
+- Change direction when colliding
+- Remove square when clicking on it
+
+Part Three
+- Add a <div> with a short explanation of how the game works, make it look good
+- Make the canvas stretch to fill the window size
+- Make the explanation hang in a corner, on top of the canvas.
+
