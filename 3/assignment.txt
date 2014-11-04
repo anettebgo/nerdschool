@@ -1,4 +1,4 @@
-Create a simple game
+Create a simple game. Push at least once for each requirement you implement.
 
 Part One
 - Create a <canvas> element of 400 by 400 pixels
