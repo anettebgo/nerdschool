@@ -1,0 +1,18 @@
+Today you will redo all the code from week 3 in a test driven way. Buckle up - this will be hard.
+
+There is a sample folder with code that may help you.
+
+1) You are going to DELETE all the code from week three and start with a blank slate. 
+2) Use the sample files to set up a project that has a tests.html page for your tests, and a index.html page for your game
+3) Solve the problems from week 3 using a test-first approach:
+    - write a test for the code you wish you had
+    - write only enough code to make the test pass
+    - write another test, and just enough code to make it pass
+
+Remember to commit and push often.
+
+Some hints:
+- Calculating the square movements and actually drawing the square are seperate concerns.
+- The test framework is extremely minimal. You can modify it to print more useful information.
+- Smaller functions and objects are easier to test.
+- Try keeping code that touches anything outside your control (canvas, document) small and as isolated as possible. We will not test this code today.
