@@ -21,8 +21,9 @@ The planned dates for 2014 are every second Tuesday at the UiB Computer Lab:
 * 23. September - Introducing the command line
 * 07. October - Learn Git
 * 21. October - No nerdschool, go to [JavaZone Academy](http://fagutvalget.no/javazone-academy-21-oktober/) instead! 
-* 04. November -  Getting started with web technologies (JavaScript, HTML & CSS)
-* 18. November - 
+* 04. November - Getting started with web technologies (JavaScript, HTML & CSS)
+* 18. November - TDD'ing your JavaScript
+* 02. December - 
 
 
 What happens if I miss one?
