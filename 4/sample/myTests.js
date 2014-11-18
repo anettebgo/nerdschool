@@ -1,6 +1,7 @@
 function myFirstTest(){
-  var actual = 1;
-  var expected = 2;
+  var game = MyGame;
+  var actual = game.init(2,3);
+  var expected = 5;
 
   MyTestFramework.assertThat(actual, expected);
 }
