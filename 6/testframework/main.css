@@ -1,0 +1,12 @@
+div {
+  color: black;
+  }
+
+.passingTest {
+	color: green;
+}
+
+.failingTest {
+	color: red;
+	font-weight: bold;
+}
