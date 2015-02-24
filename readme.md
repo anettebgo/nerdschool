@@ -12,18 +12,12 @@ Can I come?
 -----------------------
 Yes!!
 
-We are aiming primarily at students in their first few semesters of Information Technology related degrees but everyone who wants to learn some command line and web coding skills are welcome.
+We are aiming primarily at students in their first few semesters of Information Technology related degrees but everyone who wants to learn some useful development and coding skills are welcome.
 
 
 Okay, I want to! When and where?
 -----------------------
-The planned dates for 2014 are every second Tuesday at the UiB Computer Lab:
-* 23. September - Introducing the command line
-* 07. October - Learn Git
-* 21. October - No nerdschool, go to [JavaZone Academy](http://fagutvalget.no/javazone-academy-21-oktober/) instead! 
-* 04. November - Getting started with web technologies (JavaScript, HTML & CSS)
-* 18. November - TDD'ing your JavaScript
-* 02. December - 
+We run classes every second tuesday during the semester. See this [Meetup page](http://www.meetup.com/Bergen-Nerdschool/) for more info about the next event.
 
 
 What happens if I miss one?
