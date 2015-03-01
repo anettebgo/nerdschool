@@ -1,0 +1,55 @@
+Code smell: Ways to fix it
+
+* Comments: extract method, introduce assertion
+* Duplicated code: extract method, extract class, pull up method, form template method
+* Feature envy: move method, move field, extract method
+* Divergent change: extract class
+* Data class: move method, encapsulate field, encapsulate collection
+* Large class: extract class, extract subclass, extract interface, replace data value with object
+* Lazy class: inline class, collapse hierarchy
+* Long method: extract method, replace temp with query, replace method with method object, decompose conditional
+* Long parameter list: replace parameter with method, introduce parameter object, preserve whole object
+* Switch statements: replace conditionals with polymorphism, replace type code with subclasses, replace parameter with
+  explicit methods, introduce null object
+* Temporary field: extract class, introduce null object
+* Data clumps: extract class, introduce parameter object, preserve whole object
+* Alternative classes with different interfaces: rename method, move method
+
+
+Examples of how to employ common methods:
+* pull up method:
+	- pull a method up into a superclass
+
+* form template method:
+	- generalise methods so that the constituents are the same, then pull up method
+	- have the specialised parts in subclass methods that are abstract in the super class
+
+* replace conditional with polymorphism:
+	- move each "leg" of the conditional into an overriding method in a subclass, and make the original method abstract
+
+* introduce null object:
+	- rather than returning null, return an object (fex a subclass) representing the null condition (i.e. base case)
+
+* encapsulate field:
+	- make a field private and provide getter/setter
+
+* encapsulate collection:
+	- Rather than get/set for a collection, provide get, add and remove methods
+
+* Collapse hierarchy:
+	- remove unneeded classes
+
+* replace temp with query:
+	- extract expression into method
+
+* decompose conditional:
+	- extract method for condition (if part), then part and else parts
+
+* replace parameter with method:
+	- remove parameter and let the receiver invoke the method
+
+* replace type code with subclasses:
+	- replace i.e. constants with sub classes
+
+...
+
