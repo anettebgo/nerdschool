@@ -21,10 +21,10 @@ public class Pub {
         }
         else if (drink.equals(EN_ORDENDTLIG_CIDER)) pris = 110;
         else if (drink.equals(GT)) {
-            pris = enGin() + tonic() + gronneGreier();
+            pris = ingrediens6() + ingrediens5() + ingrediens4();
         }
         else if (drink.equals(BACARDI_SPECIAL)) {
-            pris = enGin()/2 + enRom() + grenadine() + limeJuice();
+            pris = ingrediens6()/2 + ingrediens1() + ingrediens2() + ingrediens3();
         }
         else {
             throw new RuntimeException("Finnes ikke i sortimentet");
@@ -35,27 +35,33 @@ public class Pub {
         return pris*antall;
     }
 
-    private int enRom() {
+    //en enhet med rom
+    private int ingrediens1() {
         return 65;
     }
 
-    private int grenadine() {
+    //en enhet med grenadine
+    private int ingrediens2() {
         return 10;
     }
 
-    private int limeJuice() {
+    //en enhet med limejuice
+    private int ingrediens3() {
+        return 10;
+    }
+    
+    //en enhet med grønne greier
+    private int ingrediens4() {
         return 10;
     }
 
-    private int gronneGreier() {
-        return 10;
-    }
-
-    private int tonic() {
+    //en enhet med tonic-vann
+    private int ingrediens5() {
         return 20;
     }
 
-    private int enGin() {
+    //en enhet med gin
+    private int ingrediens6() {
         return 85;
     }
 }
