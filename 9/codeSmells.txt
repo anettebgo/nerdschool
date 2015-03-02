@@ -1,22 +1,35 @@
 Code smell: Ways to fix it
 
-* Comments: extract method, introduce assertion
 * Duplicated code: extract method, extract class, pull up method, form template method
-* Feature envy: move method, move field, extract method
-* Divergent change: extract class
-* Data class: move method, encapsulate field, encapsulate collection
-* Large class: extract class, extract subclass, extract interface, replace data value with object
-* Lazy class: inline class, collapse hierarchy
+
 * Long method: extract method, replace temp with query, replace method with method object, decompose conditional
+
 * Long parameter list: replace parameter with method, introduce parameter object, preserve whole object
+
+* Large class/divergent change/data clumps: extract class, extract subclass, extract interface, replace data value with
+  object, introduce parameter object, preserve whole object
+
+* Data class: move method, encapsulate field, encapsulate collection
+
+* Shotgun surgery: move method, move field
+
+* Feature envy: move method, move field, extract method
+
+* Primitive obsession: replace data value with object, replace type code with class
+
 * Switch statements: replace conditionals with polymorphism, replace type code with subclasses, replace parameter with
   explicit methods, introduce null object
+
+* Speculative generality: collapse hierarchy, remove parameter, rename method, inline class
+
 * Temporary field: extract class, introduce null object
-* Data clumps: extract class, introduce parameter object, preserve whole object
-* Alternative classes with different interfaces: rename method, move method
+
+* Inappropriate intimacy: move method, move field, extract class
+
+* Comments: extract method, introduce assertion
 
 
-Examples of how to employ common methods:
+Examples of how to employ common methods (google is your friend):
 * pull up method:
 	- pull a method up into a superclass
 
@@ -51,5 +64,5 @@ Examples of how to employ common methods:
 * replace type code with subclasses:
 	- replace i.e. constants with sub classes
 
-...
+
 
