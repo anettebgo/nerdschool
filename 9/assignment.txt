@@ -1,5 +1,5 @@
-1) Form groups of about 3 people and review Pub.java in the codeSmells directory (pull from the nerdschool repository on
-github). Which code smells can you find? Refactor to remove smell(s). There is a small test suite (PubpriserTest.java)
+1) Form groups of about 3 people and review nerdschool.bar.Pub.java in the codeSmells directory (pull from the nerdschool repository on
+github). Which code smells can you find? Refactor to remove smell(s). There is a small test suite (nerdschool.bar.PubpriserTest.java)
 that will help you along the way, introduce more tests if you need them.
 
 2) Make three examples of different code smells. Submit them to your git repository and let another group review and
