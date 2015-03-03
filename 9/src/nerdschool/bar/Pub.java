@@ -3,41 +3,11 @@ package nerdschool.bar;
 public class Pub {
 
 
-    public static final String ONE_BEER = "hansa";
-    public static final String ONE_CIDER = "grans";
-    public static final String A_PROPER_CIDER = "strongbow";
-    public static final String GT = "gt";
-    public static final String BACARDI_SPECIAL = "bacardi_special";
+    public int orderDrink(Drink drink, boolean student, int amount) {
 
-    public int orderDrink(String drink, boolean student, int amount) {
-
-        Drink myDrink = getDrink(drink);
-        checkLegalPurchase(myDrink, amount);
-        int price = applyDiscount(myDrink, student);
+        checkLegalPurchase(drink, amount);
+        int price = applyDiscount(drink, student);
         return price*amount;
-    }
-
-    private Drink getDrink(String drinkOrder) {
-        Drink drink;
-        if (drinkOrder.equals(ONE_BEER)) {
-            drink = new Beer();
-        }
-        else if (drinkOrder.equals(ONE_CIDER)) {
-           drink = new Cider();
-        }
-        else if (drinkOrder.equals(A_PROPER_CIDER)) {
-            drink = new ProperCider();
-        }
-        else if (drinkOrder.equals(GT)) {
-            drink = new GinTonic();
-        }
-        else if (drinkOrder.equals(BACARDI_SPECIAL)) {
-            drink = new BacardiSpecial();
-        }
-        else {
-            throw new RuntimeException("No such drink exists");
-        }
-        return drink;
     }
 
     private void checkLegalPurchase(Drink drink, int amount) {
