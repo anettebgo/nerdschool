@@ -27,10 +27,10 @@ public class Pub {
         }
         else if (drink.equals(A_PROPER_CIDER)) price = 110;
         else if (drink.equals(GT)) {
-            price = gin() + tonicWater() + greenStuff();
+            price = Gin.price() + TonicWater.price() + GreenStuff.price();
         }
         else if (drink.equals(BACARDI_SPECIAL)) {
-            price = gin()/2 + rum() + grenadine() + limeJuice();
+            price = Gin.price()/2 + Rum.price() + Grenadine.price() + LimeJuice.price();
         }
         else {
             throw new RuntimeException("No such drink exists");
@@ -51,27 +51,5 @@ public class Pub {
         return price;
     }
 
-    private int rum() {
-        return 65;
-    }
-
-    private int grenadine() {
-        return 10;
-    }
-
-    private int limeJuice() {
-        return 10;
-    }
-    
-    private int greenStuff() {
-        return 10;
-    }
-
-    private int tonicWater() {
-        return 20;
-    }
-
-    private int gin() {
-        return 85;
-    }
 }
+
