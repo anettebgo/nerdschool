@@ -1,5 +1,9 @@
 package nerdschool.bar;
 
+import nerdschool.bar.ingredients.Gin;
+import nerdschool.bar.ingredients.GreenStuff;
+import nerdschool.bar.ingredients.TonicWater;
+
 public class GinTonic extends Drink {
 
     public GinTonic() {
