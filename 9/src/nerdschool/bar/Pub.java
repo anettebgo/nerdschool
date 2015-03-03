@@ -11,13 +11,13 @@ public class Pub {
 
     public int orderDrink(String drink, boolean student, int amount) {
 
-        checkLegalPurchase(drink, amount);
-        int price = calculatePrice(drink);
-        price = applyDiscount(drink, student, price);
+        Drink myDrink = getDrink(drink);
+        checkLegalPurchase(myDrink, amount);
+        int price = applyDiscount(myDrink, student);
         return price*amount;
     }
 
-    private int calculatePrice(String drinkOrder) {
+    private Drink getDrink(String drinkOrder) {
         Drink drink;
         if (drinkOrder.equals(ONE_BEER)) {
             drink = new Beer();
@@ -37,21 +37,21 @@ public class Pub {
         else {
             throw new RuntimeException("No such drink exists");
         }
-        return drink.price();
+        return drink;
     }
 
-    private void checkLegalPurchase(String drink, int amount) {
-        if (amount > 2 && (drink == GT || drink == BACARDI_SPECIAL)) {
+    private void checkLegalPurchase(Drink drink, int amount) {
+        if (amount > 2 && (drink instanceof GinTonic || drink instanceof BacardiSpecial)) {
             throw new RuntimeException("Too many drinks, max 2.");
         }
     }
 
-    private int applyDiscount(String drink, boolean student, int price) {
-        if (student && (drink == ONE_CIDER || drink == ONE_BEER || drink == A_PROPER_CIDER)) {
-            price = price - price/10;
+    private int applyDiscount(Drink drink, boolean student) {
+        int price = drink.price();
+        if (student && (drink instanceof Cider || drink instanceof Beer || drink instanceof ProperCider)) {
+            price = drink.price() - drink.price()/10;
         }
         return price;
     }
-
 }
 
