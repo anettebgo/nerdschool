@@ -9,11 +9,15 @@ public class Pub {
     public static final String GT = "gt";
     public static final String BACARDI_SPECIAL = "bacardi_special";
 
-    public int computeCost(String drink, boolean student, int amount) {
+    public int orderDrink(String drink, boolean student, int amount) {
 
-        if (amount > 2 && (drink == GT || drink == BACARDI_SPECIAL)) {
-            throw new RuntimeException("Too many drinks, max 2.");
-        }
+        checkLegalPurchase(drink, amount);
+        int price = calculatePrice(drink);
+        price = applyDiscount(drink, student, price);
+        return price*amount;
+    }
+
+    private int calculatePrice(String drink) {
         int price;
         if (drink.equals(ONE_BEER)) {
             price = 74;
@@ -23,47 +27,51 @@ public class Pub {
         }
         else if (drink.equals(A_PROPER_CIDER)) price = 110;
         else if (drink.equals(GT)) {
-            price = ingredient6() + ingredient5() + ingredient4();
+            price = gin() + tonicWater() + greenStuff();
         }
         else if (drink.equals(BACARDI_SPECIAL)) {
-            price = ingredient6()/2 + ingredient1() + ingredient2() + ingredient3();
+            price = gin()/2 + rum() + grenadine() + limeJuice();
         }
         else {
             throw new RuntimeException("No such drink exists");
         }
+        return price;
+    }
+
+    private void checkLegalPurchase(String drink, int amount) {
+        if (amount > 2 && (drink == GT || drink == BACARDI_SPECIAL)) {
+            throw new RuntimeException("Too many drinks, max 2.");
+        }
+    }
+
+    private int applyDiscount(String drink, boolean student, int price) {
         if (student && (drink == ONE_CIDER || drink == ONE_BEER || drink == A_PROPER_CIDER)) {
             price = price - price/10;
         }
-        return price*amount;
+        return price;
     }
 
-    //one unit of rum
-    private int ingredient1() {
+    private int rum() {
         return 65;
     }
 
-    //one unit of grenadine
-    private int ingredient2() {
+    private int grenadine() {
         return 10;
     }
 
-    //one unit of lime juice
-    private int ingredient3() {
+    private int limeJuice() {
         return 10;
     }
     
-    //one unit of green stuff
-    private int ingredient4() {
+    private int greenStuff() {
         return 10;
     }
 
-    //one unit of tonic water
-    private int ingredient5() {
+    private int tonicWater() {
         return 20;
     }
 
-    //one unit of gin
-    private int ingredient6() {
+    private int gin() {
         return 85;
     }
 }
