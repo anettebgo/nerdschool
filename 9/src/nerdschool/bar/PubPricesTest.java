@@ -50,7 +50,6 @@ public class PubPricesTest {
         assertEquals(115, actualPrice);
     }
 
-
     @Test
     public void testStudentsDoNotGetDiscountsForCocktails() throws Exception {
         int actualPrice = pub.orderDrink(new GinTonic(), true, 1);
