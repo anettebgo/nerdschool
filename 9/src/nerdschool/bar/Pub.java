@@ -17,25 +17,27 @@ public class Pub {
         return price*amount;
     }
 
-    private int calculatePrice(String drink) {
-        int price;
-        if (drink.equals(ONE_BEER)) {
-            price = 74;
+    private int calculatePrice(String drinkOrder) {
+        Drink drink;
+        if (drinkOrder.equals(ONE_BEER)) {
+            drink = new Beer();
         }
-        else if (drink.equals(ONE_CIDER)) {
-            price = 103;
+        else if (drinkOrder.equals(ONE_CIDER)) {
+           drink = new Cider();
         }
-        else if (drink.equals(A_PROPER_CIDER)) price = 110;
-        else if (drink.equals(GT)) {
-            price = Gin.price() + TonicWater.price() + GreenStuff.price();
+        else if (drinkOrder.equals(A_PROPER_CIDER)) {
+            drink = new ProperCider();
         }
-        else if (drink.equals(BACARDI_SPECIAL)) {
-            price = Gin.price()/2 + Rum.price() + Grenadine.price() + LimeJuice.price();
+        else if (drinkOrder.equals(GT)) {
+            drink = new GinTonic();
+        }
+        else if (drinkOrder.equals(BACARDI_SPECIAL)) {
+            drink = new BacardiSpecial();
         }
         else {
             throw new RuntimeException("No such drink exists");
         }
-        return price;
+        return drink.price();
     }
 
     private void checkLegalPurchase(String drink, int amount) {
